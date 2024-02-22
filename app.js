@@ -10,14 +10,20 @@ app.listen(3000);
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(_dirname, "public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 const traducaoClima = {
     "few clouds":"Poucas nuvens",
-    "scattered clouds":"Nuvens dispersas"
+    "scattered clouds":"Nuvens dispersas",
+    "overcast clouds" : "Nublado",
+    "clear sky" : "Céu limpo",
+    "moderate rain" : "Chuva moderada",
+    "broken clouds" : "Nuvens separadas",
+    "light intensity shower rain" : "Chuvisqueiro"
+
 }
 
-app.get('/clima/:cidade', async (req, res)=>{
+app.get('/climatempo/:cidade', async (req, res)=>{
     const city = req.params.cidade;
 
     try{
