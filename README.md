@@ -17,3 +17,20 @@
 ##Da 1 até a linha 54, criamos várias funções as imagens do fundo do front-end, nessa função selecionasmos a tag body, definimos a imagem de fundo, ajustamos o tamanho da imagem e criamos no final uma condição para que a imagem evite repetir.
 ##Depois definimos As descrições de cada coisa do tempo, por exemplo clima com "ºC".
 ##Nas linhas 99 a 103, definimos qual imagem vai aparecer em todos os tipos de clima, por exemplo juntamos dois climas para aparecer uma imagem que represente o que está acontecendo.
+
+# Explicação do style.css
+
+##.forminteiro: Estiliza o contêiner do formulário, definindo transparência, borda, tamanho, alinhamento e sombra, além de aplicar uma transição suave.
+##h1: Estiliza o título do formulário, definindo cor, fonte, tamanho e centralizando horizontalmente.
+##formclima: Estiliza o formulário de consulta de clima, definindo preenchimento interno e alinhamento central.
+##body: Estiliza o corpo da página, definindo cor de texto e imagem de fundo, além de ajustar sua altura e adicionar uma transição.
+##.kdam-thmor pro-regular: Define a fonte para o texto.
+##button: Estiliza o botão do formulário, definindo tamanho, borda, cor de fundo, sombra e cursor, além de adicionar uma transição.
+##climaResult: Estiliza a exibição dos resultados do clima, definindo sua posição, tamanho e alinhamento.
+##.icons e #descricaoIcon: Estiliza os ícones e a descrição dos resultados do clima.
+##.lupa: Estiliza o ícone de lupa para pesquisa.
+##Media queries: Ajustam o layout para telas menores, modificando principalmente tamanhos e posições de elementos para garantir uma melhor experiência em dispositivos móveis.
+
+# Explicação do index.html
+
+##Este código HTML cria uma página web para consultar o clima de uma cidade. Ele inclui um formulário para inserir o nome da cidade e um botão para enviar a consulta. Os resultados da consulta são exibidos na página, incluindo informações sobre temperatura, umidade e vento. Além disso, há um ícone de lupa para retornar à página inicial.
