@@ -1,49 +1,51 @@
+/* Estilização do contêiner do formulário de consulta de clima */
 .forminteiro {
-    background: transparent;
-    backdrop-filter: blur(70px);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 10px 10px;
-    height: 90%;
-    width: 30%;
-    margin-left: 32%;
-    margin-top: 2%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 28px 32px;
-    flex-direction: column;
-    color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0px 10px 100px rgba(0, 0, 0.1);
-    font-family: "Kdam Thmor Pro", sans-serif;
-    transition: 0.5s;
-    margin: 0 auto;
-    margin-top: 3%;
+    background: transparent; /* Define o fundo como transparente */
+    backdrop-filter: blur(70px); /* Aplica um desfoque ao fundo */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Adiciona uma borda sólida com transparência */
+    border-radius: 10px 10px; /* Arredonda os cantos do contêiner */
+    height: 90%; /* Define a altura do contêiner */
+    width: 30%; /* Define a largura do contêiner */
+    margin-left: 32%; /* Define a margem esquerda */
+    margin-top: 2%; /* Define a margem superior */
+    display: flex; /* Define o contêiner como flexível */
+    justify-content: center; /* Alinha os itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente */
+    padding: 28px 32px; /* Adiciona preenchimento interno */
+    flex-direction: column; /* Define a direção dos itens como coluna */
+    color: rgba(255, 255, 255, 0.5); /* Define a cor do texto com transparência */
+    box-shadow: 0px 10px 100px rgba(0, 0, 0.1); /* Adiciona uma sombra */
+    font-family: "Kdam Thmor Pro", sans-serif; /* Define a fonte do texto */
+    transition: 0.5s; /* Adiciona uma transição suave */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    margin-top: 3%; /* Define a margem superior */
 }
 
+/* Estilização do título do formulário */
 h1 {
-    color: rgba(255, 255, 255, 0.5);
-    font-family: "Kdam Thmor Pro", sans-serif;
-    margin: auto;
-    font-size: 24px;
+    color: rgba(255, 255, 255, 0.5); /* Define a cor do texto com transparência */
+    font-family: "Kdam Thmor Pro", sans-serif; /* Define a fonte do texto */
+    margin: auto; /* Centraliza horizontalmente */
+    font-size: 24px; /* Define o tamanho da fonte */
 }
 
+/* Estilização do formulário de consulta de clima */
 #formclima {
-    padding: 10%;
-    text-align: center;
-    transition-duration: 1s;
-
+    padding: 10%; /* Adiciona preenchimento interno */
+    text-align: center; /* Alinha o texto no centro */
+    transition-duration: 1s; /* Define a duração da transição */
 }
 
+/* Estilização do corpo da página */
 body {
-
-    margin: 0;
-    color: aliceblue;
-    background-image: url(./gif/gifs-do-planeta-terra-girando.gif);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transition: 3s;
-    height: 78vh;
+    margin: 0; /* Remove as margens padrão */
+    color: aliceblue; /* Define a cor do texto */
+    background-image: url(./gif/gifs-do-planeta-terra-girando.gif); /* Define a imagem de fundo */
+    background-repeat: no-repeat; /* Evita repetir a imagem de fundo */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-size: cover; /* Ajusta a imagem de fundo ao tamanho da tela */
+    transition: 3s; /* Define a duração da transição */
+    height: 78vh; /* Define a altura do corpo da página */
 }
 
 .kdam-thmor pro-regular {
@@ -52,6 +54,7 @@ body {
     font-style: normal;
 }
 
+/* Estilização do botão */
 button {
     width: 80%;
     height: 30px;
@@ -88,6 +91,7 @@ button {
     right: 10px;
 }
 
+/* Exibe os resultados do clima */
 #climaResult {
     display: none;
     width: 350px;
@@ -98,6 +102,7 @@ button {
 
 }
 
+/* Estilização dos ícones */
 .icons {
     display: flex;
     flex-direction: column-reverse;
@@ -107,6 +112,7 @@ button {
     width: 300vh;
 }
 
+/* Estilização do ícone de descrição */
 #descricaoIcon {
     position: center;
     height: 30px;
@@ -114,6 +120,7 @@ button {
     right: 10px;
 }
 
+/* Estilização da descrição */
 .descricao {
     display: flex;
     justify-content: center;
@@ -143,6 +150,7 @@ button {
     transition: 2s;
 }
 
+/* Estilização do ícone de lupa */
 .lupa img {
     height: 4vh;
     width: 30px;
@@ -151,11 +159,13 @@ button {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+/* Media query para telas menores que 1200 pixels */
 @media (max-width: 1200px) {
     .forminteiro {
         height: 525px;
     }
 
+    /* Exibe os resultados do clima */
     #climaResult {
         display: block;
         font-size: 15px;
@@ -197,6 +207,7 @@ button {
 
 }
 
+/* Media query para telas menores que 640 pixels */
 @media (max-width: 640px) {
 
     #cityIcon {

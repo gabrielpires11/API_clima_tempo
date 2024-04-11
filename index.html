@@ -1,54 +1,76 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html> <!-- Declara o tipo de documento e a versão do HTML -->
+<html lang="pt-br"> <!-- Especifica o idioma do documento -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta do Clima</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <!-- As meta tags fornecem metadados sobre o documento HTML -->
+    <meta charset="UTF-8"> <!-- Especifica a codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a viewport para design responsivo -->
+    <title>Consulta do Clima</title> <!-- Define o título da página da web -->
+    
+    <!-- Links para o arquivo de estilo externo e Google Fonts -->
+    <link rel="stylesheet" href="style.css"> <!-- Links para um arquivo de estilo externo para estilização -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconecta ao Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconecta ao servidor do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet"> <!-- Carrega uma fonte específica do Google Fonts -->
 </head>
 
 <body>
+    <!-- Conteúdo principal da página da web -->
+
+    <!-- Formulário para consulta do clima -->
     <div class="forminteiro">
         <form id="formclima" class="form-texto">
-            <h1>Consulta do Clima</h1>
+            <h1>Consulta do Clima</h1> <!-- Título para consulta do clima -->
 
+            <!-- Campo de entrada para o nome da cidade -->
             <input type="text" id="cityInput" name="cityInput" placeholder="Cidade"> <br>
-            <button type="submit">Consultar</button>
+            <button type="submit">Consultar</button> <!-- Botão para enviar o formulário -->
         </form>
 
+        <!-- Link para retornar à página inicial -->
         <div id="lupa" class="lupa">
             <a href="index.html"><img src="./icones/lupa.png" alt="LUPA"></a>
         </div>
+
+        <!-- Container para informações do clima -->
         <div class="segundaTela">
+            <!-- Descrição das condições climáticas -->
             <div id="descricao1" class="descricao">
                 <img id="descricaoIcon" src="" alt="Ícone descrição">
                 <p id="descricao"></p>
             </div>
+
+            <!-- Dados do clima -->
             <div id="climaResult">
+                <!-- Ícone e nome da cidade -->
                 <div class="icons">
                     <p id="city"></p>
                     <img id="cityIcon" src="" alt="">
                 </div>
+
+                <!-- Temperatura -->
                 <div class="icons">
                     <p id="temperatura"></p>
                     <img id="temperaturaIcon" src="" alt="Ícone temperatura">
                 </div>
+
+                <!-- Umidade -->
                 <div class="icons">
                     <p id="umidade"></p>
                     <img id="umidadeIcon" src="" alt="Ícone umidade">
                 </div>
+
+                <!-- Vento -->
                 <div class="icons">
                     <p id="vento"></p>
                     <img id="ventoIcon" src="" alt="ícone vento">
                 </div>
             </div>
         </div>
+    </div>
 
-        <script src="script.js"></script>
+    <!-- Arquivo JavaScript para funcionalidade interativa -->
+    <script src="script.js"></script>
 
 </body>
 

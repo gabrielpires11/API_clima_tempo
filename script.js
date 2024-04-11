@@ -53,35 +53,44 @@ function tempestade() {
     body.style.backgroundRepeat = "no-repeat"; // Evita que a imagem se repita
 }
 
+// Função para capitalizar a primeira letra de uma string(a primeira tem que ser maiúscula)
 function primeiraLetraMaiuscula(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+// Adiciona um listener de evento para o formulário com id 'formclima'
 document.getElementById('formclima').addEventListener('submit', function (event) {
+    // Previne o comportamento padrão de envio do formulário
     event.preventDefault();
 
+    // Obtém o valor do campo de entrada 'cityInput'
     const city = document.getElementById('cityInput').value;
 
+    // Envia uma requisição fetch para o servidor local para obter dados meteorológicos da cidade especificada
     fetch(`http://localhost:3000/climatempo/${city}`)
-        .then(response => response.json())
+        .then(response => response.json()) // Converte a resposta para JSON
         .then(data => {
 
+            // Obtém o elemento HTML onde os resultados serão exibidos
             const tempoResult = document.getElementById('climaResult');
 
+            // Verifica se os dados foram recebidos com sucesso
             if (data.Temperatura) {
 
+                // Atualiza os elementos HTML com os dados recebidos
                 document.getElementById('city').textContent = primeiraLetraMaiuscula(city);
                 document.getElementById('temperatura').textContent = `${data.Temperatura}°C`;
                 document.getElementById('umidade').textContent = `${data.Umidade}%`;
                 document.getElementById('vento').textContent = `${data.VelocidadeDoVento}m/s`;
                 document.getElementById('descricao').textContent =`${data.Clima}`
 
+                // Altera o estilo dos elementos para exibi-los na página
                 document.getElementById('climaResult').style.display = 'flex';
                 document.getElementById('descricao1').style.display = 'flex';
                 document.getElementById('lupa').style.display = 'flex';
                 document.getElementById('formclima').style.display = 'none';  
                 
-
+                // Obtém os elementos de ícones
                 const temperaturaIcon = document.getElementById('temperaturaIcon');
                 const umidadeIcon = document.getElementById('umidadeIcon');
                 const ventoIcon = document.getElementById('ventoIcon');
@@ -89,13 +98,14 @@ document.getElementById('formclima').addEventListener('submit', function (event)
 
                 console.log(city);
 
+                // Define os caminhos dos ícones com base nos dados recebidos
                 cityIcon.src = "./icones/cidade.png";
                 temperaturaIcon.src = "./icones/termometro.png";
                 umidadeIcon.src = "./icones/umidade.png";
                 ventoIcon.src = "./icones/vento2.png";
                 descricaoIcon.src = "./icones/clima.png";
 
-
+                // Chama diferentes funções com base nas condições meteorológicas para ajustes visuais
                 if (data.Clima == 'ceu limpo') {
                     sol();
                 } else if (data.Clima == 'Nublado' || data.Clima == 'muitas nuvens') {
@@ -113,6 +123,7 @@ document.getElementById('formclima').addEventListener('submit', function (event)
                 }
 
             } else {
+                // Exibe uma mensagem de erro caso os dados não sejam recebidos corretamente
                 tempoResult.innerHTML = "Erro ao obter dados metereologicos";
             }
         })
